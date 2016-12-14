@@ -1,0 +1,9 @@
+<h1>{{title}}</h1>
+<input [(ngModel)]="name">
+<p>{{name}}</p>
+<ul>
+  <li *ngFor="let user of student;" (click)="displayuser(user)">
+    {{user}}
+    </li>
+</ul>
+
