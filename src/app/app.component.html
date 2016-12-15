@@ -1,9 +1,53 @@
-<h1>{{title}}</h1>
-<input [(ngModel)]="name">
-<p>{{name}}</p>
+<!--<h1>{{title}}</h1>-->
+<!--type text in textbox show text below textbox-->
+<!--<input [(ngModel)]="name"><br/>
+<p>{{name}}</p><br/>-->
+<!--type text in textbox show text below textbox-->
+<!--click on name in orderlist than show name in textbox-->
+<!--<input [(ngModel)]="SelectedUser">
+<h1>{{SelectedUser}}</h1>
 <ul>
   <li *ngFor="let user of student;" (click)="displayuser(user)">
     {{user}}
-    </li>
-</ul>
+  </li>
+</ul>-->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--<div class="table">-->
+  <table border="1">
+    <thead>
+      <tr>
+          <th>#</th>
+          <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let new_user of users;" (click)="display_user(new_user)">
+            <th scope="row">{{new_user.id}}</th>
+            <td>{{new_user.name}}</td>
+      </tr>
+    </tbody>
+  </table>
+<!--</div>-->
+
+<div class="details">
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Phone No</th>
+        <th>Image</th>
+    </tr>
+    <tr *ngIf="new_selectedUser">
+          <td>{{new_selectedUser.id}}</td>
+          <td>{{new_selectedUser.name}}</td>
+          <td>{{new_selectedUser.phone_no}}</td>
+          <td><img src='{{new_selectedUser.image}}'></td>
+    </tr>
+</table>
+</div>
+<div>
+  <a [href]="'/home/eternal/Downloads/ng-2' + outputPath" target="_blank"><img src='https://cdn1.iconfinder.com/data/icons/logotypes/32/square-facebook-512.png'></a>
+</div>
 

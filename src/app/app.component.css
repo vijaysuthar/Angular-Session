@@ -1,3 +1,15 @@
 h1{
     color:red;
 }
+p{
+    color:green;
+}
+img{
+    height: 120px;
+}
+.selectname{
+    margin-top: 41px;
+}
+.details{
+    margin-top: 25px;
+}
